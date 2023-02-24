@@ -34,6 +34,8 @@ class MemberRepositoryTest {
         Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
         Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
         Assertions.assertThat(findMember).isEqualTo(member); //식별자가 같으면 같은 entity로 인식
+
+        //https://www.youtube.com/watch?v=bEtTpCviSc4
     }
 
 }
