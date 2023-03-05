@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter @Setter
 public class Delivery {
@@ -13,7 +15,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private Long id;
 
-    @OneToOne(mappedBy = "delivery")   //1대1 매핑
+    @OneToOne(mappedBy = "delivery", fetch = LAZY)   //1대1 매핑
                 //1대1일때는 보통 조회를 더 많이 하는 곳에 FK를 넣는다.
                 //여기서는 Order에 놓는다. 둘 다 상관없긴함
     private Order order;

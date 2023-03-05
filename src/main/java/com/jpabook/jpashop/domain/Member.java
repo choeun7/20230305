@@ -23,4 +23,6 @@ public class Member {
     @OneToMany(mappedBy = "member")     //연관관계의 주인이 아닐 땐 mappedBy, 매핑된 거울이라는 의미
                                         //여기에 값을 넣는다고 FK가 변경되지 X
     private List<Order> orders = new ArrayList<>();
+    //컬렉션은 필드에서 바로 초기화하는 것이 null 문제에서 안전하다.
+
 }
